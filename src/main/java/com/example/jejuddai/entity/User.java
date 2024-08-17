@@ -21,5 +21,6 @@ public class User {
 
     private String nickname;
 
+    @Column(name = "profile_image")
     private String profileImageUrl;
 }
