@@ -35,7 +35,8 @@ public class StoreService {
         double lonStart = lon - (LONGITUDE_VALUE / 1000 * range);
         double lonEnd = lon + (LONGITUDE_VALUE / 1000 * range);
 
-        return storeRepository.findByLatitudeBetweenAndLongitudeBetweenAndIsNotGoodForChildFalseAndIsFoodSellingTrue(latStart, latEnd, lonStart, lonEnd);
+        return storeRepository.findByLatitudeBetweenAndLongitudeBetween(latStart, latEnd, lonStart, lonEnd);
+//        return storeRepository.findByLatitudeBetweenAndLongitudeBetweenAndIsNotGoodForChildFalseAndIsFoodSellingTrue(latStart, latEnd, lonStart, lonEnd);
     }
 
     public List<Menu> getMenuByStoreId(String storeId) {
