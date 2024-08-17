@@ -22,4 +22,8 @@ public class StoreResponseDTO {
     private String category; // 가게 카테고리
 
     private String image; // 가게 이미지
+
+    private boolean isNotGoodForChild; // 청소년 유해업소
+
+    private boolean isFoodSelling; // 음식 판매 여부
 }
