@@ -15,12 +15,19 @@ public class Store {
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
     private String name;
+
     private String address;
+
     private String phone;
+
     private String category;
+
     private double latitude;
+
     private double longitude;
+
     private String image;
 
     public StoreResponseDTO toResponseDTO() {

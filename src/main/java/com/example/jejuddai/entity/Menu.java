@@ -23,6 +23,7 @@ public class Menu {
     private Store store; // 판매 가게 아이디
 
     private String name; // 메뉴 이름
+
     private String price; // 메뉴 금액
 
     public MenuResponseDTO toResponseDTO() {
