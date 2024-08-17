@@ -29,6 +29,8 @@ public class Store {
     private double longitude;
 
     private String image;
+    private boolean isNotGoodForChild;
+    private boolean isFoodSelling;
 
     public StoreResponseDTO toResponseDTO() {
         return StoreResponseDTO.builder()
@@ -40,6 +42,8 @@ public class Store {
                 .phone(this.phone)
                 .category(this.category)
                 .image(this.image)
+                .isNotGoodForChild(this.isNotGoodForChild)
+                .isFoodSelling(this.isFoodSelling)
                 .build();
     }
 }

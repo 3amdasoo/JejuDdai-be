@@ -48,8 +48,8 @@ public class ReviewService {
                 .content(reviewDTO.getContent())
                 .grade(reviewDTO.getGrade())
 
-                .created_at(LocalDateTime.now())
-                .updated_at(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
                 .build();
 
         review = reviewRepository.save(review);
@@ -78,8 +78,8 @@ public class ReviewService {
                 .imageUrl1(review.getImageUrl1())
                 .imageUrl2(review.getImageUrl2())
                 .imageUrl3(review.getImageUrl3())
-                .created_at(review.getCreated_at())
-                .updated_at(review.getUpdated_at())
+                .createdAt(review.getCreatedAt())
+                .updatedAt(review.getUpdatedAt())
                 .build();
 
     }
@@ -96,8 +96,8 @@ public class ReviewService {
                 .imageUrl1(review.getImageUrl1())
                 .imageUrl2(review.getImageUrl2())
                 .imageUrl3(review.getImageUrl3())
-                .created_at(review.getCreated_at())
-                .updated_at(review.getUpdated_at())
+                .createdAt(review.getCreatedAt())
+                .updatedAt(review.getUpdatedAt())
                 .build());
     }
 
@@ -122,7 +122,7 @@ public class ReviewService {
             review.setImageUrl3(imageUrl3);
         }
 
-        review.setUpdated_at(LocalDateTime.now());
+        review.setUpdatedAt(LocalDateTime.now());
 
         review = reviewRepository.save(review);
 
@@ -150,8 +150,8 @@ public class ReviewService {
                 .imageUrl1(review.getImageUrl1())
                 .imageUrl2(review.getImageUrl2())
                 .imageUrl3(review.getImageUrl3())
-                .created_at(review.getCreated_at())
-                .updated_at(review.getUpdated_at())
+                .createdAt(review.getCreatedAt())
+                .updatedAt(review.getUpdatedAt())
                 .build();
     }
 

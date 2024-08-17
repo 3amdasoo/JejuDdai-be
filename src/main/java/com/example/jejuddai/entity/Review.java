@@ -30,17 +30,23 @@ public class Review {
 
     private String content;
 
-    private String imageUrl1;
+    @Column(name = "image_url1") // 데이터베이스의 컬럼명
+    private String imageUrl1;    // 엔티티의 변수명
 
+    @Column(name = "image_url2")
     private String imageUrl2;
 
+    @Column(name = "image_url3")
     private String imageUrl3;
 
-    private LocalDateTime created_at;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
-    private LocalDateTime updated_at;
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 
-    private LocalDateTime deleted_at;
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
 
     public ReviewDTO toResponseDTO() {
         return ReviewDTO.builder()
@@ -54,8 +60,8 @@ public class Review {
                 .imageUrl1(this.imageUrl1)
                 .imageUrl2(this.imageUrl2)
                 .imageUrl3(this.imageUrl3)
-                .created_at(this.created_at)
-                .updated_at(this.updated_at)
+                .createdAt(this.createdAt)
+                .updatedAt(this.updatedAt)
                 .build();
     }
 }
