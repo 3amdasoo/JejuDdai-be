@@ -16,7 +16,7 @@ import java.io.IOException;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("")
+@RequestMapping("/api")
 public class KakaoLoginController {
     private final KakaoService kakaoService;
 
