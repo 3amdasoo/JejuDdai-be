@@ -19,6 +19,15 @@ configurations {
 	}
 }
 
+bootJar {
+	archiveBaseName.set('jejuddai')
+}
+jar{
+	archiveBaseName.set('jejuddai')
+	enabled = false
+
+}
+
 repositories {
 	mavenCentral()
 }
