@@ -22,6 +22,6 @@ public class ReviewDTO {
     private String imageUrl1; // 리뷰 이미지1 URL
     private String imageUrl2; // 리뷰 이미지2 URL
     private String imageUrl3; // 리뷰 이미지3 URL
-    private LocalDateTime created_at; // 최초 작성 날짜
-    private LocalDateTime updated_at; // 최근 수정 날짜
+    private LocalDateTime createdAt; // 최초 작성 날짜
+    private LocalDateTime updatedAt; // 최근 수정 날짜
 }
