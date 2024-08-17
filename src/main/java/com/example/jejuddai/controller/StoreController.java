@@ -26,7 +26,6 @@ public class StoreController {
             @RequestParam(value = "latitude") double latitude,
             @RequestParam(value = "longitude") double longitude,
             @RequestParam(value = "range") double range) {
-//        return storeService.getStoreByCategoryAndLocation(category, latitude, longitude, range);
 
         return storeService.getStoreByCategoryAndLocation(latitude, longitude, range);
 
