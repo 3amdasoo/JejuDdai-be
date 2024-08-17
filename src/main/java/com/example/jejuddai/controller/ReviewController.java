@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/review")
+@RequestMapping("/api/review")
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
