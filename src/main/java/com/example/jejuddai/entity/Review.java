@@ -27,14 +27,19 @@ public class Review {
     private Store store;
 
     private int grade;
+
     private String content;
 
     private String imageUrl1;
+
     private String imageUrl2;
+
     private String imageUrl3;
 
     private LocalDateTime created_at;
+
     private LocalDateTime updated_at;
+
     private LocalDateTime deleted_at;
 
     public ReviewDTO toResponseDTO() {
