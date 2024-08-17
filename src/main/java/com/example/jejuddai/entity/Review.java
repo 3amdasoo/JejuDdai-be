@@ -27,6 +27,7 @@ public class Review {
     private Store store;
 
     private int grade;
+
     private String content;
 
     @Column(name = "image_url1") // 데이터베이스의 컬럼명

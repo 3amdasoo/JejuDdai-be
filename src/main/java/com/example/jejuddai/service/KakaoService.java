@@ -20,9 +20,13 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 @Service
 public class KakaoService {
+
     private String clientId;
+
     private final String KAUTH_TOKEN_URL_HOST;
+
     private final String KAUTH_USER_URL_HOST;
+
     private final UserRepository userRepository;
 
     @Autowired
