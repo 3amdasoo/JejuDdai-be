@@ -1,10 +1,14 @@
 package com.example.jejuddai.controller;
 
+import com.example.jejuddai.dto.StoreMenuResponseDTO;
+import com.example.jejuddai.dto.StoreResponseDTO;
 import com.example.jejuddai.entity.Menu;
 import com.example.jejuddai.entity.Review;
 import com.example.jejuddai.entity.Store;
 import com.example.jejuddai.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,10 +36,29 @@ public class StoreController {
     }
 
     // 스토어 메뉴 정보 전달
+    // 스토어와 메뉴 정보 전달
+    // 스토어와 메뉴 정보 전달
     @GetMapping("/menu")
-    public List<Menu> getMenusByStoreId(@RequestParam(value = "storeId") String storeId) {
-        return storeService.getMenuByStoreId(storeId);
+    public ResponseEntity<StoreMenuResponseDTO> getStoreWithMenus(@RequestParam(value = "storeId") String storeId) {
+        Store store = storeService.findById(storeId); // Store 정보를 가져옴
+        List<Menu> menus = storeService.getMenuByStoreId(storeId); // 해당 가게의 메뉴 정보를 가져옴
+
+        // StoreMenuResponseDTO 생성
+        StoreMenuResponseDTO response = StoreMenuResponseDTO.builder()
+                .storeId(store.getId())
+                .storeName(store.getName())
+                .storeAddress(store.getAddress())
+                .storePhone(store.getPhone())
+                .category(store.getCategory())
+                .latitude(store.getLatitude())
+                .longitude(store.getLongitude())
+                .menus(menus) // 메뉴가 없는 경우에도 빈 리스트가 포함됨
+                .build();
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+
 
     // 스토어 리뷰 정보 전달
     @GetMapping("/review")

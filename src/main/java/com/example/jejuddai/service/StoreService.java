@@ -47,4 +47,10 @@ public class StoreService {
         return reviewRepository.findByStoreId(storeId);
     }
 
+    public Store findById(String storeId) {
+        return storeRepository.findById(storeId)
+                .orElseThrow(() -> new RuntimeException("Store not found"));
+    }
+
 }
+
